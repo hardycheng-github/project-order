@@ -1,0 +1,100 @@
+{config_load file="$language/lang_$language.conf" section="product_info"}
+{literal}
+<script>
+function infoDecrease(price){
+	var span = document.getElementById("info_qty");
+	var input = span.querySelector("input[type='text']");
+	var qty = parseInt(input.value);
+	if(qty > 1) qty -= 1;
+	input.value = qty;
+}
+function infoIncrease(price){
+	var span = document.getElementById("info_qty");
+	var input = span.querySelector("input[type='text']");
+	var qty = parseInt(input.value);
+	if(qty < 99) qty += 1;
+	input.value = qty;
+}
+function updatePrice(){
+	
+}
+</script>
+{/literal}
+{$PRODUCT_NAVIGATOR}
+<form name="cart_quantity" action="{$FORM_ACTION}" method="post">
+<table width="100%" border="0">
+  <tr><td>
+	<table width="100%" border="0"><tr>
+		<td width="30%">
+			{if $PRODUCTS_IMAGE!=''}
+			<img src="{$PRODUCTS_IMAGE}" border="0" height="{$product_height}" width="{$product_width}">
+			{/if}
+		</td>
+		<td width="70%">
+			<table width="100%" height="{$product_height}">
+				<tr ><td >
+					<span class="productInfoHead">{$PRODUCTS_NAME}</span>
+				</td></tr>
+				<tr ><td >
+				<div style="height:100px;" class="scrollBlock">
+					<span class="productInfoText">{$PRODUCTS_DESCRIPTION}</span>
+				</div>
+				</td></tr>
+				<tr>
+				<td>
+					<span class="productPriceInfo">{$PRODUCTS_PRICE}</span>
+				</td>
+				<td>
+					<span id="info_qty"><table>
+					<tr>
+						<!--<span class="qtyCtl_button" onclick="myDecrease({$module_data.PID});">－</span>-->
+						<td valign="middle" align="center" class="productInfoQty">{#text_qty#}</td>
+						<td valign="middle" align="center" onclick="infoDecrease();">{$image_btn_decrease}</td>
+						<td valign="middle" align="center" >{$ADD_QTY}</td>
+						<td valign="middle" align="center" onclick="infoIncrease();">{$image_btn_increase}</td>
+						<!--<span class="qtyCtl_button" onclick="myIncrease({$module_data.PID});">＋</span>-->
+					</tr>
+					<tr>
+						<td colspan='4' valign="middle" align="center">{$hint_content}</td>
+					</tr>
+					</table></span>
+				</td>
+				</tr>
+			</table>
+		</td>
+	</tr></table>
+  </td></tr>
+<!--
+{if $PRODUCTS_MODEL!=''}{#model#} 
+{$PRODUCTS_MODEL}
+{/if}
+{if $PRODUCTS_DISCOUNT!=''}
+<font size="1" color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">
+<strong>{#text_discount#}</strong></font>{$PRODUCTS_DISCOUNT}
+
+{/if}
+-->
+            <!--{#print#}{$PRODUCTS_PRINT}<br>-->
+           
+
+<!--
+{if $PRODUCTS_FSK18=='true'}
+<img src="{$tpl_path}img/fsk18.gif">
+{/if}
+{$MODULE_graduated_price}
+-->
+<tr>
+	<td width="100%" align="center">{$MODULE_product_options}</td>
+</tr>
+{if ($PRODUCTS_PRICE != "" ) }
+<tr>
+	<td align="center">
+		<table><tr>
+			<td align="center">{$HOME_BUTTON}</td>
+			<td align="center">{$ADD_CART_BUTTON}</td>
+		</tr></table>
+	</td>
+</tr>
+{ /if }
+</table>
+</form>

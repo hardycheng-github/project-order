@@ -1,0 +1,4 @@
+2019-08-26 13:55:41,286:DEBUG main (ParamMain.java:73) - call ...deduct(40)
+2019-08-26 13:55:41,325:DEBUG main (ICERModel.java:384) - Started..Mon Aug 26 13:55:41 CST 2019
+2019-08-26 13:55:41,325:ERROR main (ICERModel.java:392) - errMsg=java.io.IOException: Cannot run program "D:\xampp\htdocs\order\ICERAPI.exe" (in directory "D:\xampp\htdocs\order"): CreateProcess error=2, 系統找不到指定的檔案。
+2019-08-26 13:55:41,326:DEBUG main (ParamMain.java:75) - Timeout

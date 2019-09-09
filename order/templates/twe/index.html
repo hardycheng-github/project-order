@@ -1,0 +1,130 @@
+{config_load file="$language/lang_$language.conf" section="index"} 
+<div width="100%" align="center">
+<table width="{$width}" style="margin-inline-start: 0px; margin-inline-end: 0px;" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td valign="top">	
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+	{if $sbox_box}	
+<table  border="0" cellspacing="0" cellpadding="0">{php} $col=''; {/php}
+  <tr>{foreach name=aussen item=box_data from=$sbox_box}{php} $col++; {/php}
+	<td class="boxText" valign="top"><table  border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="100%">{eval var=$box_data.BOXES}</td>
+  </tr>
+</table></td>
+	{php} 
+
+  if ($col>=3) {
+  $col=0;
+  echo '</tr><tr>';
+  }
+  {/php}
+	{/foreach}    
+  </tr>
+</table>
+{/if}
+<table  width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>{if $1box_box}
+  <td valign="top" > 
+<div id='left_div' class='scrollBlock' style='height:{$block_height}px;'>
+	<table width="{$left_width}" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td valign="top">	
+			{foreach name=aussen item=box_data from=$1box_box}
+			{eval var=$box_data.BOXES}
+			{/foreach}
+		  </td>
+		</tr>
+	</table>
+	</div>
+	</td>{/if}
+          <td width="{$center_width}" valign="top">
+<div id='left_div' class='scrollBlock' style='height:{$block_height}px;'>
+	<table width="{$center_width}" style="padding-left:8px;" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="main">{$main_content}</td>
+        </tr>
+		</table></div>
+		
+		</td>{if $rbox_box}
+          <td valign="top">	  
+<table width="{$right_width}" style="padding-left:8px" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+	<h1>HI</h1>
+	{foreach name=aussen item=box_data from=$rbox_box}
+	<p>{eval var=$box_data.BOXES}</p>
+	{/foreach}    </td>
+  </tr>
+  </table> 
+  </td>{/if}  
+        </tr>
+
+      </table>
+	</td>
+	</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+	<div style="height:{$cartbar_height}px;">
+	<table width="100%" height="{$cartbar_height}px" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td width="5%">{$BUTTON_CLEAR}</td>
+		<td><div align="right">{$TOTAL_CONTENT}</div></td>
+		<td width="5%"><div align="right">{$BUTTON_NEXT}</div></td>
+	  </tr>
+	</table>
+	</div>
+</td></tr>
+</table>
+</div>
+
+
+<script>
+//drag scrolling
+
+<!-- {literal} -->
+<!-- var clicked = false, clickY, clickEle = null; -->
+<!-- var elements = document.querySelectorAll(".scrollBlock"); -->
+<!-- elements.forEach(function(element){ -->
+	<!-- element.onmousedown = function(e) { -->
+		<!-- clicked = true; -->
+		<!-- clickY = e.screenY; -->
+		<!-- clickEle = element; -->
+	<!-- }; -->
+<!-- }); -->
+<!-- document.querySelector('body').onmousemove = function(e) { -->
+	<!-- if(clicked && clickEle){ -->
+		<!-- var speed = 1.5; -->
+		<!-- clickEle.scrollTop = (clickEle.scrollTop + (clickY - e.screenY) * speed); -->
+		<!-- clickY = e.screenY; -->
+	<!-- } -->
+<!-- }; -->
+<!-- document.querySelector('body').onmouseup = function(e) { -->
+	<!-- clicked = false; -->
+<!-- }; -->
+<!-- {/literal} -->
+
+//category redirect
+{if $empty_cPath==true}
+var left_div = document.getElementById('left_div');
+left_div.querySelector('a').click();
+{/if}
+</script>
+
+
+</body>
+<!-- myEdit scrollBlock底下所有元素加上scrollBlock=true屬性
+{literal} 
+<script>
+var id = 'scrollBlock';
+var t = document.getElementById(id);
+t.setAttribute('pid', id);
+t.querySelectorAll('body *').forEach(function f(e){e.setAttribute('pid', id);});
+</script>
+{/literal} 
+ -->
+</html>

@@ -1,0 +1,84 @@
+{config_load file="$language/lang_$language.conf" section="index"}
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="middle">
+    <td class="ClassHeading">{$CATEGORIES_NAME}</td>
+    <!--<td class="ClassHeading" align="right">{$SELECT_LANG}</td>-->
+  </tr>
+</table>
+<!--
+{if $CATEGORIES_DESCRIPTION} <font size="1" face="Verdana, Arial, Helvetica, sans-serif"> <br>
+{$CATEGORIES_DESCRIPTION}</font> <br>{if $CATEGORIES_IMAGE}<img src="{$CATEGORIES_IMAGE}">{/if}
+<br>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="border-bottom: 1px solid; border-color: #000000;">&nbsp;</td>
+  </tr>
+</table>
+{/if}
+-->
+{ if $MANUFACTURER_DROPDOWN} <br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="main"><div align="right">{#text_show#} {$MANUFACTURER_DROPDOWN}</div></td>
+  </tr>
+</table>
+<br>
+{/if}
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td> <div align="left"> 
+		{php}$isOdd = true;{/php}
+          {foreach name=aussen item=module_data from=$module_content} 
+		  {php}
+		  if($isOdd == true)
+			echo '<table width="100%"><tr><td width="50%" style="padding-right: 5px;">';
+		  else
+			echo '<td width="50%" style="padding-left: 5px;">';
+		  {/php}
+		  <table class="product_item" width="100%" onclick="location.href='{$module_data.PRODUCTS_BUY_LINK}'">
+		  <tr>
+		  <td>
+		  <table width="100%">
+          <tr> 
+            <td width="1" rowspan="2">{if $module_data.PRODUCTS_IMAGE!=''}<img src="{$module_data.PRODUCTS_IMAGE}" border="0">{/if}
+			{if $module_data.PRODUCTS_FSK18=='true'}
+			<br>
+			<img src="{$tpl_path}img/fsk18.gif">
+			{/if}
+			</td>
+            <td class="productName">
+			{$module_data.PRODUCTS_NAME}
+			<br/>
+			<div class="PRODUCTS_SHORT_DESCRIPTION">{$module_data.PRODUCTS_SHORT_DESCRIPTION}</div>
+			</td>
+          </tr>
+		  <tr>
+			<td style="text-align:left;"><span class="productPriceList">{$module_data.PRODUCTS_PRICE}</span></td>
+		  </tr>
+		  </table>
+		  </td>
+		  </tr>
+		  </table>
+		  {php}
+		  if($isOdd == true)
+			echo '</td>';
+		  else
+			echo '</td></tr></table>';
+		  $isOdd = !$isOdd;
+		  {/php}
+          {/foreach} 
+		  {php}
+		  if($isOdd != true)
+			echo '<td width="50%" style="padding-left: 5px;"></td>';
+		  {/php}
+      </div></td>
+  </tr>
+</table>
+<!--
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>{$NAVIGATION}</td>
+  </tr>
+</table>
+-->

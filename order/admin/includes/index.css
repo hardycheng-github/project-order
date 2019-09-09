@@ -1,0 +1,58 @@
+/* styles used by index.php */
+
+#colone, #coltwo, #colthree {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 3em;
+	float:left;
+	display:inline;
+	margin-left:5px;
+	width:30%;
+} 
+div.row span.left {
+  float: left;
+  text-align: left;
+  width: 74%;
+  }
+div.row span.right {
+  float: right;
+  text-align: right;
+  width: 34%;
+  }
+
+div.row span.center {
+	margin-right: 30px;
+  }
+div.header {
+	clear: both;
+	padding: 3px;
+	font-weight: bold;
+	color: #FFFFFF;
+  }
+div.row {
+	clear: both;
+	padding: 3px;
+	background-color: #f7f6ef;
+	margin-top: 1px;
+  }
+div.clearBoth {
+	clear: both;
+	margin-top: 20px;
+  }
+div.reportBox {
+	background-color: #d7d6cc;
+	border: 1px solid #d7d6cc;
+	margin-top: 1em;
+  }
+div.copyrightrow {
+	clear: both;
+	padding: 25px;
+	background-color: #ffffff;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+ text-align: center;
+ }
+div.warrantyrow {
+	clear: both;
+	background-color: #ffffff;
+	font: 9px Verdana, Arial, Helvetica, sans-serif;
+ text-align: center;
+ }

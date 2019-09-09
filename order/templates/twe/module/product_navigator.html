@@ -1,0 +1,11 @@
+{config_load file="$language/lang_$language.conf" section="product_navigator"}
+<table  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="main" width="70">{if $FIRST!=''}<a href="{$FIRST}">{#first#}</a>{/if}</td>
+    <td class="main" width="70">{if $PREVIOUS!=''}<a href="{$PREVIOUS}">{#back#}</a>{/if}</td>
+    <td class="main" width="70">{if $NEXT!=''}<a href="{$NEXT}">{#next#}</a>{/if}</td>
+    <td class="main" width="70">{if $LAST!=''}<a href="{$LAST}">{#last#}</a>{/if}</td>
+    <td class="main" width="200">{#total1#}<strong>{$PRODUCTS_COUNT}</strong>{#total#}</td>
+  </tr>
+</table>
+ 

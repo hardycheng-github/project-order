@@ -1,0 +1,16 @@
+
+
+Dear Customer ,
+
+You successful created your Customer Account, now you got following featues in our shop.
+
+-Customer shopping cart - Every item remains registered until you go to the cash box, or the products are deleted from the shopping cart.
+-Addressbook - Now we can send the products to the postal address selected by you. The perfect way to get a birthday present.
+-Previous orders  - you can check  your previous orders at any time.
+-Opinions about products- tell zour oppinion about our products to other customers
+
+If you have questions to our customer-service, contact us directly:{$content.MAIL_REPLY_ADDRESS}
+
+Caution: This eMail-address was announced to us by a customer. If you did not announce yourself, please send an eMail to: {$content.MAIL_REPLY_ADDRESS}
+
+    

@@ -1,0 +1,82 @@
+{config_load file="$language/lang_$language.conf" section="news_product_info"}
+<table width="100%" border="0">
+  <tr> 
+    <td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="main"><table  nowrap width="100%" border="0">
+              <tr>
+                <td><font color="#666666" size="3" face="Verdana, Arial, Helvetica, sans-serif"><strong>{$PRODUCTS_NAME}</strong> 
+                  </font></td>
+                <td nowrap>
+<div align="right"><font size="5" face="Verdana, Arial, Helvetica, sans-serif"><strong>{$PRODUCTS_PRICE} 
+                    </strong> </font></div></td>
+              </tr>
+            </table>
+             {if $PRODUCTS_MODEL!=''}{#model#} 
+            {$PRODUCTS_MODEL}{/if}<font size="1" color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">{if $PRODUCTS_DISCOUNT!=''}<strong>{#text_discount#}</strong></font>{$PRODUCTS_DISCOUNT}<br>{/if}
+            {#print#}{$PRODUCTS_PRINT}<br>
+			</td>
+        </tr>
+      </table>
+      <table width="100%" border="0">
+        <tr>
+          <td style="border-right: 1px solid; border-color: #EAE253;" valign="top" >
+<div align="center">
+              <table width="1" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="1"> 
+                    <div align="center">
+                      <table width="1" border="0" cellpadding="5" cellspacing="0">
+                        <tr>
+                          <td>{if $PRODUCTS_IMAGE!=''}<img src="{$PRODUCTS_IMAGE}" border="0">{/if}</td>
+                        </tr>
+                      </table>
+                      <br>
+                      {if $PRODUCTS_FSK18=='true'}
+					  <br>
+					  <img src="{$tpl_path}img/fsk18.gif">
+					  {/if}
+					  </td>
+                </tr>
+              </table>
+            </div></td>
+         </tr></table>
+         <table> <tr>  
+          <td  style="border-top: 1px solid; border-color: #EAE253;" width="100%" class="main" valign="top">{$PRODUCTS_DESCRIPTION}<br>
+            <br>{$BUTTON_BACK}            
+            </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+
+
+{if $PRODUCTS_URL != ''} 
+<table width="100%" border="0" bgcolor="#EAE253">
+  <tr> 
+    <td><p align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">{$PRODUCTS_URL}<br>
+        </font></p></td>
+  </tr>
+</table>
+{/if}
+{if $PRODUCTS_DATE_AVIABLE != ''} 
+<table width="100%" border="0" bgcolor="#EAE253">
+  <tr> 
+    <td><p align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+        {$PRODUCTS_DATE_AVIABLE}</font></p></td>
+  </tr>
+</table>
+{/if} 
+{if $PRODUCTS_ADDED != ''} 
+<table width="100%" border="0" bgcolor="#EAE253">
+  <tr> 
+    <td><p align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+        {$PRODUCTS_ADDED}</font></p></td>
+  </tr>
+</table>
+{/if}
+<br>
+

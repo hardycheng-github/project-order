@@ -1,0 +1,305 @@
+#  -----------------------------------------------------------------------------------------
+#  $Id: spiders.txt,v 1.1 2003/09/06 22:13:53 oldpa   Exp $
+#
+#  TWE-Commerce - community made shopping
+#  http://www.oldpa.com.tw#
+#  Copyright (c) 2003 TWE-Commerce
+#  -----------------------------------------------------------------------------------------
+#  based on: 
+#  (c) 2000-2001 The Exchange Project  (earlier name of osCommerce)
+   
+  
+#  (c) 2002-2003 osCommerce (spiders.txt,v 1.2 2003/05/05); www.oscommerce.com 
+#  (c) 2003	 nextcommerce (spiders.txt,v 1.3 2003/08/13); www.nextcommerce.org 
+#
+#  Released under the GNU General Public License 
+#  -----------------------------------------------------------------------------------------
+acoon
+ah-ha.com
+ahoy
+altavista
+ananzi
+anthill
+appie
+arachnophilia
+arale
+araneo
+aranha
+architext
+aretha
+arks
+asterias
+atn
+atomz
+augurfind
+backrub
+bannana_bot
+big brother
+bjaaland
+blackwidow
+bloodhound
+booch
+bradley
+calif
+cassandra
+churl
+cienciaficcion
+cmc
+collective
+combine system
+computingsite
+crawl
+cusco
+deepindex
+deweb
+diamondbot
+die blinde kuh
+digger
+docomo
+download express
+dwcp
+ebiness
+e-collector
+emacs-w3 search engine
+esther
+evliya celebi
+exabot
+ezresult
+felix ide
+ferret
+fetchrover
+fido
+fireball
+fish search
+fouineur
+funnelweb
+gaisbot
+gazz
+gcreep
+getterroboplus
+geturl
+gigabot
+goforit
+golem
+grabber
+grapnel
+griffon
+gromit
+grub
+gulliver
+hamahakki
+harvest
+havindex
+hku www octopus
+html index
+html_analyzer
+htmlgobble
+hubater
+hyper-decontextualizer
+ia_archiver
+ibm_planetwide
+iconsurf
+iltrovatore
+image.kapsi.net
+imagelock
+incywincy
+indexer
+infobee
+informant
+infoseek
+ingrid
+inktomisearch.com
+inspector web
+intelliagent
+internet shinchakubin
+ip3000
+iron33
+israeli-search
+jack
+javabee
+jetbot
+jumpstation
+katipo
+kdd-explorer
+kilroy
+kototoi
+labelgrabber
+lachesis
+larbin
+legs
+libwww-perl
+linkalarm
+link validator
+linkscan
+linkwalker
+lockon
+lycos
+magpie
+mantraagent
+marvin/infoseek
+mattie
+mediafox
+mercator
+merzscope
+mnogosearch
+moget
+monster
+moose
+motor
+msnbot
+muncher
+muscatferret
+mwd.search
+myweb
+nameprotect
+nationaldirectory
+naverbot
+nazilla
+ncsa beta
+nec-meshexplorer
+nederland.zoek
+netcarta webmap engine
+netmechanic
+netresearchserver
+netscoop
+newscan-online
+ng/
+nhse
+nomad
+npbot
+nutch
+nzexplorer
+obot
+occam
+ooglebot
+open text
+openfind
+orb search
+osis-project
+pack rat
+pageboy
+parasite
+partnersite
+patric
+peerbot
+pegasus
+peregrinator
+pgp key agent
+phantom
+phpdig
+picosearch
+piltdownman
+pimptrain
+pinpoint
+pioneer
+piranha
+plumtreewebaccessor
+polybot
+pompos
+poppelsdorf
+poppi
+popular iconoclast
+psbot
+raven search
+roach
+road runner
+roadhouse
+robbie
+robozilla
+rules
+scooter
+scrubby
+search.aus-au.com
+searchprocess
+seeker
+semanticdiscovery
+senrigan
+sg-scout
+shai'hulud
+shark
+sidewinder
+sift
+simmany
+site searcher
+site valet
+sitetech-rover
+skymob.com
+sleek
+slurp
+snooper
+sohu
+speedfind
+spider
+spyder
+steeler/
+suke
+suntek
+supersnooper
+surfnomore
+sven
+szukacz
+tach black widow
+tarantula
+templeton
+teoma
+t-h-u-n-d-e-r-s-t-o-n-e
+titan
+titin
+tkwww
+toutatis
+t-rex
+turnitinbot
+tutorgig
+ucsd
+udmsearch
+ultraseek
+url check
+vagabondo
+valkyrie
+verticrawl
+victoria
+vision-search
+voilabot
+voyager/
+w3c_validator
+w3m2
+w3mir
+wallpaper
+wanderer
+web core
+web hopper
+web wombat
+webbandit
+webcatcher
+webcopy
+webfoot
+weblayers
+weblinker
+weblog monitor
+webmirror
+webquest
+webreaper
+websitepulse
+websnarf
+webstolperer
+webvac
+webwalk
+webwatch
+webwombat
+webzinger
+whatuseek
+whizbang
+whowhere
+wild ferret
+wire
+worldlight
+wwwc
+xget
+xift
+yandex
+zao/
+zippp
+zyborg
+ybot
+yahoobot
+Yahoo! Slurp

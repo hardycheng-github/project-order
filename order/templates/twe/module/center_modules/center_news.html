@@ -1,0 +1,23 @@
+ <table width="100%" border="0" cellpadding="2" cellspacing="0">
+  <tr>
+    <td class="infoBoxHeading"><table width="100%"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="infoBoxHeading">{$heading_text} </td>
+          <td width="10"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+  <td class="infoBox">
+ <table width="100%" border="0" cellspacing="2" cellpadding="0">
+        {foreach name=aussen item=module_data from=$module_content}
+          <tr>
+            <td valign="top" class="main"><img src="{$tpl_path}img/world2.png"border="0"></td>
+              <td class="main"  style="color: #000000;"><a href="{$module_data.LINK}">&nbsp;{$module_data.NAME}</a>
+                <a href="{$module_data.LINK}">&nbsp;<strong>[<strong>{$module_data.MORE}</strong>]</strong></a>
+                {$module_data.LAST_TIME}&nbsp;&nbsp;{$module_data.VIEWED}</td>
+			    </tr> {/foreach}               
+              </table>
+  </td>
+  </tr>           
+</table>

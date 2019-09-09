@@ -1,0 +1,4 @@
+
+{$message}
+
+參觀推薦商品,請按下:{$PRODUCTS_LINK}

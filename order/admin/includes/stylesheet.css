@@ -1,0 +1,299 @@
+/* --------------------------------------------------------------
+   $Id: stylesheet.css,v 1.1 2003/09/06 22:05:29 oldpa   Exp $   
+
+   TWE-Commerce - community made shopping
+   http://www.oldpa.com.tw
+   Copyright (c) 2003 TWE-Commerce
+   --------------------------------------------------------------
+   based on: 
+   (c) 2000-2001 The Exchange Project  (earlier name of osCommerce)
+   (c) 2002-2003 osCommerce(stylesheet.css,v 1.24 2003/06/02); www.oscommerce.com 
+   (c) 2003	 nextcommerce (stylesheet.css,v 1.12 2003/08/23); www.nextcommerce.org
+   (c) 2003	 xt-commerce  www.xt-commerce.com
+
+   Released under the GNU General Public License 
+   --------------------------------------------------------------*/
+/* links */
+a:link { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; }
+a:visited { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; }
+a:active { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; }
+a:hover { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: underline; }
+
+a.headerLink:link { font-family: Verdana, Arial, sans-serif; font-size: 13px; color: #000000; font-weight: bold; text-decoration: none; }
+a.headerLink:visited { font-family: Verdana, Arial, sans-serif; font-size: 13px; color: #000000; font-weight: bold; text-decoration: none; }
+a.headerLink:active { font-family: Verdana, Arial, sans-serif; font-size: 13px; color: #000000; font-weight: bold; text-decoration: none; }
+a.headerLink:hover { font-family: Verdana, Arial, sans-serif; font-size: 13px; color: #000000; font-weight: bold; text-decoration: underline; }
+
+a.menuBoxHeadingLink:link { font-size: 12px; color: #000000; font-weight: bold; text-decoration: none; }
+a.menuBoxHeadingLink:visited { font-size: 12px; color: #000000; font-weight: bold; text-decoration: none; }
+a.menuBoxHeadingLink:active { font-size: 12px; color: #000000; font-weight: bold; text-decoration: none; }
+a.menuBoxHeadingLink:hover { font-size: 12px; color: #000000; font-weight: bold; text-decoration: none; }
+
+a.menuBoxContentLink:link { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; }
+a.menuBoxContentLink:visited { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: ##FFCC00; font-weight: normal; text-decoration: none; }
+a.menuBoxContentLink:active { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: ##FFCC00; font-weight: normal; text-decoration: none; }
+a.menuBoxContentLink:hover { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #666666; font-weight: normal; text-decoration: none; }
+
+a.splitPageLink:link { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: none; }
+a.splitPageLink:visited { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: none; }
+a.splitPageLink:active { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: none; }
+a.splitPageLink:hover { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: underline; background-color: #FFFF33; }
+
+/* menu box */
+.menuBoxHeading { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; background-color: #C5C5C5; }
+.menuBoxContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #616060; }
+.longDescription { visibility: hidden; display: none; }
+/* page */
+body { background-color: #ffffff; color: #000000; margin: 0px; }
+.headerBar {
+ background-color: #cccccc; 
+border-color: #000000; 
+border-bottom: 1px solid;  
+ }
+.headerBarContent { 
+font-family: Verdana, Arial, sans-serif; 
+font-size: 10px; 
+color: #000000; 
+font-weight: bold; 
+padding: 2px;
+
+}
+.columnLeft { background-color: #FFFFFF;}
+
+.columnLeft2 { 
+vertical-align: top;
+background-color: #DFEDFF; 
+font-color: #000000;
+ }
+
+
+.pageHeading { font-family: Verdana, Arial, sans-serif; font-size: 18px; color: #727272; font-weight: bold; }
+
+/* data table */
+.dataTableHeadingRow { 
+background: url(../images/sprite.png) repeat-x 0 -1700px;
+line-height: 1.6;
+font-color: #000000;
+border-bottom: 1px solid;
+border-color: #000000;
+}
+.dataTableHeadingContent {
+font-family: Verdana, Arial, sans-serif; 
+font-size: 12px; 
+color: #000000; 
+font-weight: bold; 
+border-bottom: 1px solid;
+border-color: #000000;
+}
+.dataTableRow {
+background-color: #ffffff; 
+}
+
+.dataTableRowSelected {
+ background-color: #FFCC00; 
+ font-weight: bold;
+
+ }
+.dataTableRowOver {
+ background-color: #F6F6F6; 
+
+ }
+.dataTableContent {
+ font-family: Verdana, Arial, sans-serif; 
+ font-size: 10px; 
+ color: #000000; 
+ vertical-align: middle;
+ }
+
+.dataTableContent_products {
+ font-family: Verdana, Arial, sans-serif; 
+ font-size: 10px; 
+ color: #000000; 
+ vertical-align: middle;
+ background-color: #FFF2F2;
+ } 
+ 
+
+ 
+.dataTableContentRow {
+font-family: Verdana, Arial, sans-serif; 
+font-size: 10px; 
+color: #000000; 
+vertical-align: middle;
+border-bottom: 1px solid;
+border-color: #cccccc;
+}
+
+/* info box */
+.infoBoxHeading { 
+font-family: Verdana, Arial, sans-serif; 
+font-size: 12px; color: #000000; 
+background-color:#FFCC00;
+text-align: center;
+font-color: #000000;
+border: 1px solid;
+border-color: #000000;
+	line-height: 1.5;
+
+}
+.infoBoxContent { 
+font-family: Verdana, Arial, sans-serif; 
+font-size: 10px;
+color: #000000; 
+background-color:#DFEDFF; 
+}
+
+/* message box */
+
+.messageBox { font-family: Verdana, Arial, sans-serif; font-size: 10px; }
+.messageStackError, .messageStackWarning { font-family: Verdana, Arial, sans-serif; font-size: 10px; background-color: #ffb3b5; }
+.messageStackSuccess { font-family: Verdana, Arial, sans-serif; font-size: 10px; background-color: #99ff00; }
+
+/* forms */
+CHECKBOX, INPUT, RADIO, SELECT, TEXTAREA, FILE { font-family: Verdana, Arial, sans-serif; font-size: 11px; }
+FORM { display: inline; }
+
+/* account */
+.formArea { background-color: #f1f1f1; border-color: #cccccc; border-style: solid; border-width: 1px; }
+.formAreaTitle { font-family: Tahoma, Verdana, Arial, sans-serif; font-size: 12px; font-weight: bold; }
+
+/* attributes */
+.attributes-odd { background-color: #f4f7fd; }
+.attributes-even { background-color: #ffffff; }
+
+/* miscellaneous */
+.specialPrice { color: #ff0000; }
+.oldPrice { text-decoration: line-through; }
+.fieldRequired { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #ff0000; }
+.smallText { font-family: Verdana, Arial, sans-serif; font-size: 10px; }
+.main { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+.errorText { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #ff0000; }
+
+#colone, #coltwo, #colthree {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 3em;
+	float:left;
+	display:inline;
+	margin-left:5px;
+	width:30%;
+} 
+div.header {
+	clear: both;
+	padding: 3px;
+	font-weight: bold;
+	color: #000000;
+  }
+div.reportBox {
+	background-color: #DFEDFF;
+	border: 1px solid #d7d6cc;
+	margin-top: 1em;
+  }
+div.row {
+	clear: both;
+	padding: 3px;
+	background-color: #f7f6ef;
+	margin-top: 1px;
+  }
+/* SpryCollapsiblePanel.css - version 0.5 - Spry Pre-Release 1.6 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/* This is the selector for the main CollapsiblePanel container. For our
+ * default style, the CollapsiblePanel is responsible for drawing the borders
+ * around the widget.
+ *
+ * If you want to constrain the width of the CollapsiblePanel widget, set a width on
+ * the CollapsiblePanel container. By default, our CollapsiblePanel expands horizontally to fill
+ * up available space.
+ *
+ * The name of the class ("CollapsiblePanel") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style the
+ * CollapsiblePanel container.
+ */
+.CollapsiblePanel {
+	margin: 0px;
+	padding: 0px;
+	}
+
+/* This is the selector for the CollapsiblePanelTab. This container houses
+ * the title for the panel. This is also the container that the user clicks
+ * on to open or close the panel.
+ *
+ * The name of the class ("CollapsiblePanelTab") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style an
+ * CollapsiblePanel panel tab container.
+ */
+.CollapsiblePanelTab {
+	font: bold 13px sans-serif;
+	background-color: #EEEEEE;
+	border-bottom: solid 1px #FFFFFF;
+	margin: 0px;
+	padding: 2px;
+	line-height: 1.5;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+/* This is the selector for a CollapsiblePanel's Content area. It's important to note that
+ * you should never put any padding on the content area element if you plan to
+ * use the CollapsiblePanel's open/close animations. Placing a non-zero padding on the content
+ * element can cause the CollapsiblePanel to abruptly grow in height while the panels animate.
+ *
+ * The name of the class ("CollapsiblePanelContent") used in this selector is not necessary
+ * to make the widget function. You can use any class name you want to style a
+ * CollapsiblePanel content container.
+ */
+.CollapsiblePanelContent {
+	margin: 0px;
+	padding: 4px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+    background-color: #FFFFFF;
+}
+
+/* An anchor tag can be used inside of a CollapsiblePanelTab so that the
+ * keyboard focus ring appears *inside* the tab instead of around the tab.
+ * This is an example of how to make the text within the anchor tag look
+ * like non-anchor (normal) text.
+ */
+.CollapsiblePanelTab a {
+	color: black;
+	text-decoration: none;
+}
+
+/* This is an example of how to change the appearance of the panel tab that is
+ * currently open. The class "CollapsiblePanelOpen" is programatically added and removed
+ * from panels as the user clicks on the tabs within the CollapsiblePanel.
+ */
+.CollapsiblePanelOpen .CollapsiblePanelTab {
+  background:url(../images/sprite.png) repeat-x 0 -0px;}
+
+/* This is an example of how to change the appearance of the panel tab when the
+ * CollapsiblePanel is closed. The "CollapsiblePanelClosed" class is programatically added and removed
+ * whenever the CollapsiblePanel is closed.
+ */
+
+.CollapsiblePanelClosed .CollapsiblePanelTab {
+  background:url(../images/sprite.png) repeat-x 0 -1700px;}
+}
+
+/* This is an example of how to change the appearance of the panel tab as the
+ * mouse hovers over it. The class "CollapsiblePanelTabHover" is programatically added
+ * and removed from panel tab containers as the mouse enters and exits the tab container.
+ */
+.CollapsiblePanelTabHover,  .CollapsiblePanelOpen .CollapsiblePanelTabHover {
+	background-color: #CCC;
+}
+
+/* This is an example of how to change the appearance of all the panel tabs when the
+ * CollapsiblePanel has focus. The "CollapsiblePanelFocused" class is programatically added and removed
+ * whenever the CollapsiblePanel gains or loses keyboard focus.
+ */
+.CollapsiblePanelFocused .CollapsiblePanelTab {
+	background-color: #3399FF;
+}
+TD.alert, SPAN.alert {
+  color: #FF0000;
+  font-weight: bold;
+}

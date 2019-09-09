@@ -1,0 +1,11 @@
+
+{$MESSAGE}
+  
+The value of the Gift Voucher was{$AMMOUNT}
+    
+{$GIFT_ID} 
+
+{$GIFT_LINK}
+
+You can now visit our site, login and send the Gift Voucher amount to anyone you want.        
+or visit {$WEBSITE} and enter the code during the checkout process.

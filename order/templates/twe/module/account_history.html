@@ -1,0 +1,33 @@
+{config_load file="$language/lang_$language.conf" section="account_history"}<h2 class="pageheader">{#heading_history#}</h2>
+<br>
+<br>
+{foreach name=aussen item=order_data from=$order_content} <strong  style="color: #000000;">{#text_oid#}{$order_data.ORDER_ID}</strong><br>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+         
+        <tr> 
+
+          
+    <td style="border-top: 1px solid; border-color: #EAE253;" class="main"><strong> 
+      </strong> <font size="2"><strong  style="color: #000000;">{#text_date#}</strong><font color="#000000">{$order_data.ORDER_DATE}</font></font><br>
+      <strong  style="color: #000000;">{#text_articles#}</strong> <font color="#000000">{$order_data.ORDER_PRODUCTS}</font> <br>
+      <strong  style="color: #000000;">{#text_total#}</strong> <font color="#000000">{$order_data.ORDER_TOTAL}&nbsp;&nbsp;</font><strong  style="color: #000000;">{#text_status#}</strong> <font color="#000000">{$order_data.ORDER_STATUS}</font> 
+      <br>
+      <font color="#000000">{$order_data.ORDER_BUTTON}</font><br>
+    </td>
+        </tr>
+         </table><br>
+
+		 {/foreach}
+		 
+<div align="right"><br>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td>{$SPLIT_BAR}</td>
+    </tr>
+    <tr>
+      <td><div align="right"><br>
+          {$BUTTON_BACK}</div></td>
+    </tr>
+  </table>
+  <br>
+</div>

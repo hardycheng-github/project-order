@@ -1,0 +1,68 @@
+{php}
+$colNum=option_colNum;
+$select_color="#FA9200";
+$item_table_style="width:100%; border:2px solid $select_color; border-radius: 10px; font-size: 24px;";
+$item_table_style_selected="background:$select_color; color:#FFFFFF;";
+{/php}
+{literal}
+<script>
+function optionClick(option_id,item_id){
+	var input = document.querySelector("input[type='radio'][name='"+option_id+"'][value='"+item_id+"']");
+	input.checked=true;
+	optionUpdate();
+}
+function optionUpdate(){
+	var tables = document.querySelectorAll("table[item_type]");
+	tables.forEach(function fun(item){
+		var radio = item.querySelector("input[type='radio']");
+		if(radio.checked == true){
+			item.style='{/literal}{php}echo $item_table_style.$item_table_style_selected;{/php}{literal}';
+		} else{
+			item.style='{/literal}{php}echo $item_table_style;{/php}{literal}';
+		}
+	});
+}
+</script>
+{/literal}
+<table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+	{foreach name=outer item=options_data from=$options} 
+	<tr>
+		<td valign="top" class="main"><b>{$options_data.NAME}</td>
+	</tr>
+	<tr>
+		<td class="main" nowrap>
+			<table style="width:100%;"><tr>
+				{php} $count=0; $widthRate=100/$colNum; {/php}
+				{foreach key=key_data item=item_data from=$options_data.DATA}
+				<td style="width:{php}echo $widthRate;{/php}%;">
+					<table item_type="true" style="{php}echo $item_table_style;{/php}" onclick="optionClick('id[{$options_data.ID}]','{$item_data.ID}')"><tr>
+						<td style="width:65%" align="left">
+							{$item_data.TEXT}
+							<input hidden type="radio" name="id[{$options_data.ID}]" value="{$item_data.ID}" 
+								{php}if($count==0) echo "checked";{/php}>
+						</td>
+						<td align="center">{if $item_data.PREFIX!='+'}{$item_data.PREFIX}{/if}{$item_data.PRICE}</td>
+					</tr></table>
+				</td>
+				{php}
+					if( ($count+1) % $colNum == 0 )
+						echo "</tr><tr>";
+					$count++;
+				{/php}
+				{/foreach}
+				{php}
+					for($i=$count%$colNum; $i%$colNum!=0; $i++)
+						echo "<td style='width:".$widthRate."%;'></td>";
+				{/php}
+			</tr></table>
+		</td>
+	</tr>
+	{/foreach} 
+</table>
+<script>optionUpdate();</script>
+
+
+  
+  
+
+  

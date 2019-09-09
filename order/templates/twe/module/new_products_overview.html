@@ -1,0 +1,63 @@
+{config_load file="$language/lang_$language.conf" section="new_products"} 
+<h2 class="pageheader">{#heading_text#}</h2>
+<br> 
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  {foreach name=aussen item=module_data from=$module_content}
+  {php} $col++; 
+  {/php}
+    <td><div align="left">
+<!--
+        <table  width="100%" border="0" cellpadding="0" cellspacing="4">
+          <tr>
+            <td width="50%" rowspan="2" >{if $module_data.PRODUCTS_IMAGE}<a href="{$module_data.PRODUCTS_LINK}"><img src="{$module_data.PRODUCTS_IMAGE}" border="0"></a>{/if}</td>
+            <td class="main"><strong><a href="{$module_data.PRODUCTS_LINK}">{$module_data.PRODUCTS_NAME}</a></strong></td>
+          </tr>
+          <tr>
+            <td class="main">{$module_data.PRODUCTS_DESCRIPTION}<br>
+              <strong style="color: #000000;">{$module_data.PRODUCTS_PRICE}<br>
+              </strong>{$module_data.BUTTON_BUY_NOW}<br>
+            </td>
+          </tr>
+
+        </table>
+-->
+        <table  width="100%" border="0" cellpadding="0" cellspacing="4">
+          <tr> 
+            <td width="100%" height="120">{if $module_data.PRODUCTS_IMAGE}<a href="{$module_data.PRODUCTS_LINK}"><img src="{$module_data.PRODUCTS_IMAGE}" border="0"></a>{/if}</td>
+	  </tr>
+	  <tr>
+            <td class="main"><strong><a href="{$module_data.PRODUCTS_LINK}">{$module_data.PRODUCTS_NAME}</a></strong></td>
+          </tr>
+          <tr> 
+            <td class="main">
+<!--
+{$module_data.PRODUCTS_DESCRIPTION}<br> 
+-->
+{if ($module_data.PRODUCTS_PRICE != "NT\$ 0 " ) }
+              <strong style="color: #000000;">{$module_data.PRODUCTS_PRICE}<br>
+              </strong>{$module_data.BUTTON_BUY_NOW}<br>
+{ /if }
+            </td>
+          </tr>
+           
+        </table>
+
+      </div></td>
+  {php} 
+
+  if ($col>=MAX_DISPLAY_PRODUCTS_PER_ROW) {
+  $col=0;
+  echo '</tr><tr>';
+  }
+  {/php}
+  {/foreach}  
+  </tr>
+</table>
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>{$NAVIGATION_BAR}</td>
+  </tr>
+</table>

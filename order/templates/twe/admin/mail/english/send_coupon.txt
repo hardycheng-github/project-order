@@ -1,0 +1,10 @@
+{$MESSAGE}
+      
+You can redeem this coupon during checkout. Just enter the code in the box provided, and click on the redeem button. 
+
+The coupon code is: 
+{$COUPON_ID}
+Don't lose the coupon code, make sure to keep the code safe so you can benefit from this special offer 
+when you visit
+<a href="{$WEBSITE}">{$WEBSITE}</a>
+and enter the code. 

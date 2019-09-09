@@ -1,0 +1,41 @@
+
+親愛的 {$NAME},
+
+{if $PAYMENT_METHOD}
+付款方式: {$PAYMENT_METHOD}
+{$PAYMENT_INFORMATION}{/if}
+訂單序號: {$oID}
+訂單日期: {$DATE}
+{if $csID}客戶 ID :{$csID}{/if}
+----------------------------------------------------------------------
+
+
+{if $COMMENTS}
+您的購物意見:
+{$COMMENTS}
+{/if}
+
+您的訂單商品列表
+----------------------------------------------------------------------
+{foreach name=aussen item=order_values from=$order_data} 
+{$order_values.PRODUCTS_QTY} x {$order_values.PRODUCTS_NAME} {$order_values.PRODUCTS_PRICE}
+{if $order_values.PRODUCTS_ATTRIBUTES !=''}{$order_values.PRODUCTS_ATTRIBUTES}{/if}
+
+{/foreach}
+
+{foreach name=aussen item=order_total_values from=$order_total}
+{$order_total_values.TITLE}{$order_total_values.TEXT}
+{/foreach}
+
+客戶資訊
+----------------------------------------------------------------------
+{$address_label_customer}
+
+{if $address_label_payment}
+帳單地址
+----------------------------------------------------------------------
+{$address_label_payment}
+{/if}
+出貨地址 
+----------------------------------------------------------------------
+{$address_label_shipping}

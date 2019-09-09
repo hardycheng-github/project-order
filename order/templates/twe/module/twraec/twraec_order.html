@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+{literal}
+<script language="JavaScript">
+    window.onload = function()
+    {
+        var fm = document.getElementById("orderForm");
+        document.getElementById("order").value = document.getElementById("orderXml").value;
+        //alert(fm.order.value);
+        fm.submit();
+    }
+    function funs() {
+        var fm = document.getElementById("orderForm");
+        document.getElementById("order").value = document.getElementById("orderXml").value;
+        alert(fm.order.value);
+        fm.submit();
+    }
+</script>
+{/literal}
+</head>
+<body>
+<div id="doc3" style="display:none">
+<div id="bd">
+  <form id="orderForm" action="{$ORDER_SUBMIT_URL}" method="post">
+  <input type="hidden" name="order" id="order" />
+                        <input class="button" type="submit" value="OK" onclick="script:funs();"/>
+  </form>
+   		<textarea cols="80" rows="50" name="orderXml" id="orderXml" >{$ORDER_XML_VALUE}</textarea>
+</div>
+</div>
+</body>
+</html>

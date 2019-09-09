@@ -1,0 +1,39 @@
+<?php
+/* -----------------------------------------------------------------------------------------
+   $Id: twe_get_ip_address.inc.php,v 1.1 2003/09/06 21:47:50 oldpa   Exp $   
+
+   TWE-Commerce - community made shopping
+   http://www.oldpa.com.tw
+   Copyright (c) 2003 TWE-Commerce
+   -----------------------------------------------------------------------------------------
+   based on: 
+   (c) 2000-2001 The Exchange Project  (earlier name of osCommerce)
+   (c) 2002-2003 osCommerce(general.php,v 1.225 2003/05/29); www.oscommerce.com 
+   (c) 2003	 nextcommerce (twe_get_ip_address.inc.php,v 1.3 2003/08/13); www.nextcommerce.org
+   (c) 2003	 xt-commerce  www.xt-commerce.com
+
+   Released under the GNU General Public License 
+   ---------------------------------------------------------------------------------------*/
+   
+  function twe_get_ip_address() {
+    if (isset($_SERVER)) {
+      if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+      } elseif (isset($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+      } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+      }
+    } else {
+      if (getenv('HTTP_X_FORWARDED_FOR')) {
+        $ip = getenv('HTTP_X_FORWARDED_FOR');
+      } elseif (getenv('HTTP_CLIENT_IP')) {
+        $ip = getenv('HTTP_CLIENT_IP');
+      } else {
+        $ip = getenv('REMOTE_ADDR');
+      }
+    }
+
+    return $ip;
+  }
+ ?>

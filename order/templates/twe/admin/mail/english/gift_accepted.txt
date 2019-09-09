@@ -1,0 +1,5 @@
+
+The Gift Voucher is worth,
+
+You recently purchasd a Gift Voucher from our site, for security reasons, the amount of the Gift Voucher was not immediatley credited to you. The shop owner has now released this amount
+The value of the Gift Voucher was{$AMMOUNT}

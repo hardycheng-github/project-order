@@ -1,0 +1,35 @@
+{config_load file="$language/lang_$language.conf" section="shopping_cart"}
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="middle">
+    <td class="ClassHeading">{$ICON_ARROW}{#heading_cart#}</td>
+    <!--<td class="ClassHeading" align="right">{$SELECT_LANG}</td>-->
+  </tr>
+</table>
+{$MODULE_gift_cart}  
+{if $info_message!=''}
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="main" style="border: 1px solid; border-color: #ff0000;" bgcolor="#FFCCCC"><div align="center">{$info_message}</div></td>
+  </tr>
+</table>
+<br>
+{/if}
+{if $cart_empty==true}
+  
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td class="main"><div align="center">{#text_empty#}</div></td>
+  </tr>
+</table>
+{else}
+<form id="cart_form" name="cart_quantity" action="{$FORM_ACTION}" method="post">
+{$HIDDEN_OPTIONS}
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td><div class='scrollBlock'>{$MODULE_order_details}</div></td>
+	  <td><div id="div_reload" hidden>{$BUTTON_RELOAD}</div></td>
+    </tr>
+  </table>
+</form>
+<p>{/if} </p>

@@ -1,0 +1,12 @@
+
+親愛的客戶 ,
+
+您訂單的處理狀態.
+
+{if $NOTIFY_COMMENTS}Comments:{$NOTIFY_COMMENTS}{/if}
+
+
+
+備註: {$ORDER_STATUS}
+
+如有任何疑問，請直接回信告訴我們.

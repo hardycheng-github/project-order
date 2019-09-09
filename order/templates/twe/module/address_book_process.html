@@ -1,0 +1,44 @@
+{config_load file="$language/lang_$language.conf" section="address_book_process"}
+<h2 class="pageheader">{#heading_address#}</h2>
+<br>
+<br>
+{$FORM_ACTION}
+{if $error!=''}
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>{$error}</td>
+  </tr>
+</table>
+<br>
+{/if} {$MODULE_address_book_details} <br>
+{if $delete=='1'} <b>{#title_delete#}</b> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="border-top: 1px solid; border-color: #EAE253;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="main" width="100%" style="color: #000000;">{#text_delete#}<br>
+            <br>
+          </td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="4">
+              <tr> 
+                <td width="1" align="center" valign="top" nowrap class="main"> 
+                  <div align="center"><strong style="color: #000000;">{#text_address#}</strong><br>
+                    <img src="{$tpl_path}img/arrow_south_east.gif"> </div></td>
+                <td width="150" nowrap bgcolor="FEEDE3" class="main" style="border-right: 1px solid; border-color: #EAE253;">
+<div align="left" style="color: #000000;">{$ADDRESS}</div></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+
+
+{/if}
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td style="color: #000000;">{$BUTTON_BACK}</td>
+    <td><div align="right" style="color: #000000;">{$BUTTON_UPDATE}{$BUTTON_DELETE}</div></td>
+  </tr>
+</table>
